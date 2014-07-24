@@ -5,6 +5,9 @@
     dest: "{{ tutu_root_path }}"
     ssh_opts: "-o StrictHostKeyChecking=no"
 
+- name: Check php version
+  shell: php -v
+  
 - name: Download composer
   shell: curl -sS https://getcomposer.org/installer | php
   args:
