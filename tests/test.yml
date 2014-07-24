@@ -2,5 +2,7 @@
 - hosts: localhost
   remote_user: root
   roles:
+    - f500.php
+    - f500.php_cli
     - f500.php_composer
     - ansible-role-tutu
