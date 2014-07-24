@@ -11,12 +11,7 @@
     chdir: "{{ tutu_root_path }}"
 
 - name: Intall dependencies
-  shell: php composer.phar install --no-dev --prefer-dist
-  args:
-    chdir: "{{ tutu_root_path }}"
-
-- name: Intall dependencies
-  shell: php composer.phar install --no-dev --prefer-dist
+  shell: php composer.phar install
   args:
     chdir: "{{ tutu_root_path }}"
 
