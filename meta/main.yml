@@ -6,7 +6,7 @@ galaxy_info:
   description: TuTu - flexible http server mocking tool
   company: "Coduo"
   license: "MIT"
-  min_ansible_version: 1.4
+  min_ansible_version: 1.5.0
   platforms:
   - name: Debian
     versions:

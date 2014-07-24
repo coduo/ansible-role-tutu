@@ -1,5 +1,4 @@
 ---
-tutu_name: tutu.api
 tutu_root_path: /var/www/tutu
 tutu_responses_file_path: "{{ tutu_root_path }}/tutu/config/responses.yml"
 tutu_resources_path: "{{ tutu_root_path }}/tutu/resources"
