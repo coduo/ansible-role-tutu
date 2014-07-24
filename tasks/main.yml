@@ -1,0 +1,28 @@
+---
+- name: Clone TuTu repository
+  git:
+    repo: "https://github.com/coduo/TuTu.git"
+    dest: "{{ tutu_root_path }}"
+    ssh_opts: "-o StrictHostKeyChecking=no"
+  sudo: no
+
+- name: Intall dependencies
+  shell: composer install --no-dev --prefer-dist
+  args:
+    chdir: "{{ tutu_root_path }}"
+  sudo: no
+
+- name: Intall dependencies
+  shell: php composer.phar install --no-dev --prefer-dist
+  args:
+    chdir: "{{ tutu_root_path }}"
+  sudo: no
+
+- name: Create TuTu configuration
+  template:
+    src: config.yml.js2
+    dest: "{{ tutu_root_path }}/config/config.yml"
+  sudo: no
+
+- name: Create TuTu default responses
+  shell: cp {{ tutu_root_path }}/config/responses.yml.dist {{ tutu_root_path }}/config/responses.yml

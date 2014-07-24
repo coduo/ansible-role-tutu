@@ -1,0 +1,19 @@
+---
+dependencies:
+  - f500.php_composer
+
+galaxy_info:
+  author: norzechowicz
+  description: TuTu - flexible http server mocking tool
+  company: "Coduo"
+  license: "MIT"
+  min_ansible_version: 1.4
+  platforms:
+  - name: Debian
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  categories:
+    - web
