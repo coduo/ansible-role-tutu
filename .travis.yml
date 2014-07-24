@@ -18,5 +18,6 @@ install:
 script:
   - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
   - ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo
-  - cd /var/www/tutu/web && php -S localhost:8000&
-  - curl localhost:8000/hello/world?name=TuTu
+  - cd /var/www/tutu/web
+  - php -S localhost:8000 index.php &
+  - curl http://localhost:8000/hello/world?name=TuTu
