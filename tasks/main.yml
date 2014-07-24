@@ -6,8 +6,14 @@
     ssh_opts: "-o StrictHostKeyChecking=no"
   sudo: no
 
+- name: Download composer
+  shell: curl -sS https://getcomposer.org/installer | php
+  args:
+    chdir: "{{ tutu_root_path }}"
+  sudo: no
+
 - name: Intall dependencies
-  shell: composer install --no-dev --prefer-dist
+  shell: php composer.phar install --no-dev --prefer-dist
   args:
     chdir: "{{ tutu_root_path }}"
   sudo: no
@@ -26,3 +32,4 @@
 
 - name: Create TuTu default responses
   shell: cp {{ tutu_root_path }}/config/responses.yml.dist {{ tutu_root_path }}/config/responses.yml
+  sudo: no

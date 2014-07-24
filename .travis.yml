@@ -6,20 +6,14 @@ env:
   - SITE=test.yml
 
 before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install curl
+  - sudo apt-get install software-properties-common
+  - sudo apt-add-repository ppa:ansible/ansible
+  - sudo apt-get update
+  - sudo apt-get install ansible, curl, php5
 
 install:
-  # Install Ansible.
-  - pip install ansible
-
   # Add ansible.cfg to pick up roles path.
   - "printf '[defaults]\nroles_path = ../' > ansible.cfg"
-
-  # Install required dependencies.
-  - ansible-galaxy install f500.php
-  - ansible-galaxy install f500.php_cli
-  - ansible-galaxy install f500.php_composer
 
 script:
   # Check the role/playbook's syntax.

@@ -1,6 +1,5 @@
 ---
-dependencies:
-  - f500.php_composer
+dependencies: []
 
 galaxy_info:
   author: norzechowicz
