@@ -8,6 +8,7 @@ before_install:
   - sudo apt-get install curl
   - sudo apt-get install php5
   - sudo apt-get install php5-cli
+  - sudo apt-get install php5-curl
 
 install:
   - pip install ansible==1.5.0
