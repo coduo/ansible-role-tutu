@@ -20,4 +20,5 @@ script:
   - ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo
   - cd /var/www/tutu/web
   - php -S localhost:8000 index.php &
+  - sleep 3
   - curl http://localhost:8000/hello/world?name=TuTu
