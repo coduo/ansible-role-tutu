@@ -1,5 +1,7 @@
 # TuTu ansible role
 
+[![Build Status](https://travis-ci.org/coduo/ansible-role-tutu.svg?branch=master)](https://travis-ci.org/coduo/ansible-role-tutu)
+
 This role install TuTu - flexible http server mocking tool.
 Keep in mind that this role do not set www-serwer, you need to do it on your own.
 
