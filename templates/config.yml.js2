@@ -1,10 +1,10 @@
 parameters:
   resources_path: "{{ tutu_resources_path }}"
   responses_file_path: "{{ tutu_responses_file_path }}"
-    twig:
-        debug: true
-        auto_reload: true
-        cache: "/tmp/tutu/twig"
+  twig:
+    debug: true
+    auto_reload: true
+    cache: "/tmp/tutu/twig"
 
 extensions:
   Coduo\TuTu\Extension\Faker: ~
